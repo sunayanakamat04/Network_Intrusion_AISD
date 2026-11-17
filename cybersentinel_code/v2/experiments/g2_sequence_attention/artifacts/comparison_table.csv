@@ -1,0 +1,4 @@
+model_name,num_features,accuracy,macro_f1,recall_bruteforce,recall_normal,recall_scan,recall_synflood,normal_false_alarm_rate,attack_recall,predict_ms_mean,model_size_kb
+"XGBoost Baseline (22 feat, shipped)",22,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.6434664000025805,477.75
+XGBoost Baseline (66 feat),66,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.5839920000453276,463.9
+"G2 Causal LSTM-Attention (66 feat, L=8)",66,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.2772832000027847,354.23

@@ -1,0 +1,380 @@
+{
+  "test_round": 6,
+  "test_flows": 2735,
+  "classes": [
+    "bruteforce",
+    "normal",
+    "scan",
+    "synflood"
+  ],
+  "comparison_table": [
+    {
+      "model_name": "XGBoost Baseline (22 feat, shipped)",
+      "num_features": 22,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "recall_bruteforce": 1.0,
+      "recall_normal": 1.0,
+      "recall_scan": 1.0,
+      "recall_synflood": 1.0,
+      "normal_false_alarm_rate": 0.0,
+      "attack_recall": 1.0,
+      "predict_ms_mean": 0.6434664000025805,
+      "model_size_kb": 477.75
+    },
+    {
+      "model_name": "XGBoost Baseline (66 feat)",
+      "num_features": 66,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "recall_bruteforce": 1.0,
+      "recall_normal": 1.0,
+      "recall_scan": 1.0,
+      "recall_synflood": 1.0,
+      "normal_false_alarm_rate": 0.0,
+      "attack_recall": 1.0,
+      "predict_ms_mean": 0.5839920000453276,
+      "model_size_kb": 463.9
+    },
+    {
+      "model_name": "G2 Causal LSTM-Attention (66 feat, L=8)",
+      "num_features": 66,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "recall_bruteforce": 1.0,
+      "recall_normal": 1.0,
+      "recall_scan": 1.0,
+      "recall_synflood": 1.0,
+      "normal_false_alarm_rate": 0.0,
+      "attack_recall": 1.0,
+      "predict_ms_mean": 1.2772832000027847,
+      "model_size_kb": 354.23
+    }
+  ],
+  "models": [
+    {
+      "model_name": "XGBoost Baseline (22 feat, shipped)",
+      "num_features": 22,
+      "metrics": {
+        "n_samples": 2735,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "attack_recall": 1.0,
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_positives": 0,
+        "total_normal_flows": 445,
+        "classes": [
+          "bruteforce",
+          "normal",
+          "scan",
+          "synflood"
+        ],
+        "confusion_matrix": [
+          [
+            33,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            445,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1002,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1255
+          ]
+        ],
+        "classification_report_dict": {
+          "bruteforce": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 33.0
+          },
+          "normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 445.0
+          },
+          "scan": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1002.0
+          },
+          "synflood": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1255.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          }
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n  bruteforce     1.0000    1.0000    1.0000        33\n      normal     1.0000    1.0000    1.0000       445\n        scan     1.0000    1.0000    1.0000      1002\n    synflood     1.0000    1.0000    1.0000      1255\n\n    accuracy                         1.0000      2735\n   macro avg     1.0000    1.0000    1.0000      2735\nweighted avg     1.0000    1.0000    1.0000      2735\n",
+        "recall_bruteforce": 1.0,
+        "recall_normal": 1.0,
+        "recall_scan": 1.0,
+        "recall_synflood": 1.0
+      },
+      "latency_cpu": {
+        "n_measured": 500,
+        "mean_ms": 0.6434664000025805,
+        "median_ms": 0.6129499997769017,
+        "p95_ms": 0.8199249994959246,
+        "min_ms": 0.5074000000604428,
+        "max_ms": 1.2939999996888218
+      },
+      "predict_ms_mean": 0.6434664000025805,
+      "model_size_kb": 477.75
+    },
+    {
+      "model_name": "XGBoost Baseline (66 feat)",
+      "num_features": 66,
+      "metrics": {
+        "n_samples": 2735,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "attack_recall": 1.0,
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_positives": 0,
+        "total_normal_flows": 445,
+        "classes": [
+          "bruteforce",
+          "normal",
+          "scan",
+          "synflood"
+        ],
+        "confusion_matrix": [
+          [
+            33,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            445,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1002,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1255
+          ]
+        ],
+        "classification_report_dict": {
+          "bruteforce": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 33.0
+          },
+          "normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 445.0
+          },
+          "scan": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1002.0
+          },
+          "synflood": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1255.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          }
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n  bruteforce     1.0000    1.0000    1.0000        33\n      normal     1.0000    1.0000    1.0000       445\n        scan     1.0000    1.0000    1.0000      1002\n    synflood     1.0000    1.0000    1.0000      1255\n\n    accuracy                         1.0000      2735\n   macro avg     1.0000    1.0000    1.0000      2735\nweighted avg     1.0000    1.0000    1.0000      2735\n",
+        "recall_bruteforce": 1.0,
+        "recall_normal": 1.0,
+        "recall_scan": 1.0,
+        "recall_synflood": 1.0
+      },
+      "latency_cpu": {
+        "n_measured": 500,
+        "mean_ms": 0.5839920000453276,
+        "median_ms": 0.5244499998298124,
+        "p95_ms": 0.9403950004980286,
+        "min_ms": 0.37939999947411707,
+        "max_ms": 3.4393999994790647
+      },
+      "predict_ms_mean": 0.5839920000453276,
+      "model_size_kb": 463.9
+    },
+    {
+      "model_name": "G2 Causal LSTM-Attention (66 feat, L=8)",
+      "num_features": 66,
+      "seq_len": 8,
+      "num_parameters": 87812,
+      "streaming_matches_batch": true,
+      "metrics": {
+        "n_samples": 2735,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "attack_recall": 1.0,
+        "normal_false_alarm_rate": 0.0,
+        "normal_false_positives": 0,
+        "total_normal_flows": 445,
+        "classes": [
+          "bruteforce",
+          "normal",
+          "scan",
+          "synflood"
+        ],
+        "confusion_matrix": [
+          [
+            33,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            445,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1002,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1255
+          ]
+        ],
+        "classification_report_dict": {
+          "bruteforce": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 33.0
+          },
+          "normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 445.0
+          },
+          "scan": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1002.0
+          },
+          "synflood": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 1255.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 2735.0
+          }
+        },
+        "classification_report_text": "              precision    recall  f1-score   support\n\n  bruteforce     1.0000    1.0000    1.0000        33\n      normal     1.0000    1.0000    1.0000       445\n        scan     1.0000    1.0000    1.0000      1002\n    synflood     1.0000    1.0000    1.0000      1255\n\n    accuracy                         1.0000      2735\n   macro avg     1.0000    1.0000    1.0000      2735\nweighted avg     1.0000    1.0000    1.0000      2735\n",
+        "recall_bruteforce": 1.0,
+        "recall_normal": 1.0,
+        "recall_scan": 1.0,
+        "recall_synflood": 1.0
+      },
+      "latency_cpu_e2e": {
+        "n_measured": 500,
+        "mean_ms": 1.2772832000027847,
+        "median_ms": 1.185699999496137,
+        "p95_ms": 1.888030000372964,
+        "min_ms": 0.9334999995189719,
+        "max_ms": 2.663399999619287
+      },
+      "latency_cpu_model_only": {
+        "n_measured": 500,
+        "mean_ms": 1.15701380000246,
+        "median_ms": 1.03979999994408,
+        "p95_ms": 1.7599400007838986,
+        "min_ms": 0.7851999998820247,
+        "max_ms": 8.317699999679462
+      },
+      "latency_gpu_e2e": {
+        "n_measured": 500,
+        "mean_ms": 3.238632600006895,
+        "median_ms": 2.9912999998487066,
+        "p95_ms": 5.170580000321933,
+        "min_ms": 2.370600000176637,
+        "max_ms": 6.555699999807985
+      },
+      "latency_gpu_model_only": {
+        "n_measured": 500,
+        "mean_ms": 2.7340510000285576,
+        "median_ms": 2.486299999873154,
+        "p95_ms": 4.247734999898964,
+        "min_ms": 2.06629999956931,
+        "max_ms": 6.138199999440985
+      },
+      "predict_ms_mean": 1.2772832000027847,
+      "model_size_kb": 354.23
+    }
+  ]
+}

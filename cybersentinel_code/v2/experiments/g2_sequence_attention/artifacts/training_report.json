@@ -1,0 +1,260 @@
+{
+  "device_used": "cuda",
+  "cuda_device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "config": {
+    "data_path": "C:\\Users\\sunay\\.gemini\\antigravity-ide\\scratch\\Network_Intrusion_AISD\\cybersentinel_code\\v2\\data\\flows\\all_flows.csv",
+    "artifacts_dir": "C:\\Users\\sunay\\.gemini\\antigravity-ide\\scratch\\Network_Intrusion_AISD\\cybersentinel_code\\v2\\experiments\\g2_sequence_attention\\artifacts",
+    "train_rounds": [
+      3,
+      4,
+      5
+    ],
+    "test_round": 6,
+    "classes": [
+      "bruteforce",
+      "normal",
+      "scan",
+      "synflood"
+    ],
+    "seq_len": 8,
+    "input_dim": 66,
+    "embed_dim": 64,
+    "hidden_dim": 64,
+    "num_layers": 2,
+    "proj_dropout": 0.2,
+    "lstm_dropout": 0.3,
+    "head_dropout": 0.3,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 40,
+    "patience": 8,
+    "grad_clip": 1.0,
+    "seed": 42
+  },
+  "cv_summary": {
+    "folds": [
+      {
+        "val_round": 3,
+        "train_rounds": [
+          4,
+          5
+        ],
+        "best_epoch": 18,
+        "metrics": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "normal_false_alarm_rate": 0.0,
+          "val_nll": 4.2e-05,
+          "train_loss": 0.000485,
+          "recall_bruteforce": 1.0,
+          "recall_normal": 1.0,
+          "recall_scan": 1.0,
+          "recall_synflood": 1.0
+        }
+      },
+      {
+        "val_round": 4,
+        "train_rounds": [
+          3,
+          5
+        ],
+        "best_epoch": 30,
+        "metrics": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "normal_false_alarm_rate": 0.0,
+          "val_nll": 1.7e-05,
+          "train_loss": 0.00033,
+          "recall_bruteforce": 1.0,
+          "recall_normal": 1.0,
+          "recall_scan": 1.0,
+          "recall_synflood": 1.0
+        }
+      },
+      {
+        "val_round": 5,
+        "train_rounds": [
+          3,
+          4
+        ],
+        "best_epoch": 26,
+        "metrics": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "normal_false_alarm_rate": 0.0,
+          "val_nll": 2.5e-05,
+          "train_loss": 0.000661,
+          "recall_bruteforce": 1.0,
+          "recall_normal": 1.0,
+          "recall_scan": 1.0,
+          "recall_synflood": 1.0
+        }
+      }
+    ],
+    "mean_val_macro_f1": 1.0,
+    "mean_val_accuracy": 1.0,
+    "selected_final_epochs": 25
+  },
+  "final_training": {
+    "checkpoint_path": "C:\\Users\\sunay\\.gemini\\antigravity-ide\\scratch\\Network_Intrusion_AISD\\cybersentinel_code\\v2\\experiments\\g2_sequence_attention\\artifacts\\g2_lstm_attention.pt",
+    "trained_epochs": 25,
+    "train_time_seconds": 36.44,
+    "num_parameters": 87812,
+    "checkpoint_size_kb": 354.23,
+    "imbalance_report": {
+      "total_train_flows": 7941,
+      "raw_counts": {
+        "bruteforce": 100,
+        "normal": 1019,
+        "scan": 3006,
+        "synflood": 3816
+      },
+      "raw_proportions": {
+        "bruteforce": 0.012593,
+        "normal": 0.128321,
+        "scan": 0.378542,
+        "synflood": 0.480544
+      },
+      "class_weights": {
+        "bruteforce": 19.852501,
+        "normal": 1.948234,
+        "scan": 0.660429,
+        "synflood": 0.520244
+      },
+      "effective_weighted_proportions": {
+        "bruteforce": 0.25,
+        "normal": 0.25,
+        "scan": 0.25,
+        "synflood": 0.25
+      }
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.212307,
+        "lr": 0.00099606
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.024221,
+        "lr": 0.00098429
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.008391,
+        "lr": 0.00096489
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.005171,
+        "lr": 0.00093815
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.0035,
+        "lr": 0.00090451
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.002426,
+        "lr": 0.00086448
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.00125,
+        "lr": 0.00081871
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.000964,
+        "lr": 0.00076791
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.000866,
+        "lr": 0.00071289
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.000943,
+        "lr": 0.00065451
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.000679,
+        "lr": 0.00059369
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.000747,
+        "lr": 0.0005314
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.000659,
+        "lr": 0.0004686
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.000578,
+        "lr": 0.00040631
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.000641,
+        "lr": 0.00034549
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.000478,
+        "lr": 0.00028711
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.000578,
+        "lr": 0.00023209
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.000381,
+        "lr": 0.00018129
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.000411,
+        "lr": 0.00013552
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.000437,
+        "lr": 9.549e-05
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.000691,
+        "lr": 6.185e-05
+      },
+      {
+        "epoch": 22,
+        "train_loss": 0.000313,
+        "lr": 3.511e-05
+      },
+      {
+        "epoch": 23,
+        "train_loss": 0.0004,
+        "lr": 1.571e-05
+      },
+      {
+        "epoch": 24,
+        "train_loss": 0.000375,
+        "lr": 3.94e-06
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.00037,
+        "lr": 0.0
+      }
+    ]
+  }
+}
