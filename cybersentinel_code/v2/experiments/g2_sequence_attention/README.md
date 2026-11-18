@@ -151,7 +151,7 @@ Implemented in [preprocessing.py](preprocessing.py) (`FlowFeaturePreprocessor`),
 
 1. Extract only the 66 validated behavioral feature columns.
 2. Replace any `NaN`/`±inf` values with `0.0`.
-3. Apply smooth monotone compression $\text{signed\_log1p}(x) = \text{sign}(x)\ln(1 + |x|)$ to stabilize heavy-tailed byte/packet/rate features.
+3. Apply smooth monotone compression `signed_log1p(x) = sign(x) * ln(1 + |x|)` to stabilize heavy-tailed byte/packet/rate features.
 4. Standardize per feature via z-score `(x - mean) / std`, explicitly clamping the 9 constant TCP flag columns (`std < 1e-12`, e.g., CWR/ECE/URG counts always 0) to `0.0` so no `NaN`/`inf` is produced.
 
 ---
